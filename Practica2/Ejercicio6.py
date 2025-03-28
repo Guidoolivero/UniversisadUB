@@ -7,7 +7,7 @@
 num1 = int(input(print("Ingrese un numero: ")))
 aux1 = int()
 aux2 = int() 
-lista_numeros = []
+lista_numeros = [num1]
 
     
 while num1 != 0:
@@ -18,19 +18,20 @@ while num1 != 0:
            
         lista_numeros.append(aux1)
         
+        
+        
+        
+        
+        
+        
         print(lista_numeros)
         
         
-       
-    elif num1 % 2 != 0:
-            
-        aux2 = (num1 * 3) + 1
         
-        lista_numeros.append(aux2)
-            
-        print(lista_numeros)
-
-    num1 = int(input(print("Ingrese un numero: ")))
+        
+        
+        
+        num1 = int(input(print("Ingrese un numero: ")))
 
 
             
