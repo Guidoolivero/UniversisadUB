@@ -10,4 +10,4 @@ while num3 >= num1 and num3 <= num2:
     print(num3)
     num3= int(input("Ingrese un numero entre 0 y 10: "))
 
-print("Usted ha terminado el programa al ingresar un numero mayor a 10")
+print("Usted ha terminado el programa al ingresar un numero mayor a 0 y menor a 10")
