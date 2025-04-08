@@ -5,11 +5,22 @@ una palabra y nos diga si es alfabética o no.
 
 """
 
-def esAlfabetica():
+def esAlfabetica(word):
+
     
-    word = input()
+    if list(word) == sorted(word):
+        print("Es alfabetica")
+        
+    else: 
+        print("No es alfabetica")
+        
     
-    es_alfabetica = True
+word = str(input("Ingrese una palabra: "))
+        
+     
+esAlfabetica(word)        
+        
+        
     
     
     
