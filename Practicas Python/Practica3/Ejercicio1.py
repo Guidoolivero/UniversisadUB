@@ -4,15 +4,13 @@
 
 def cadena_de_numero():
     
-    num = int(input("Ingrse un numero entero: "))
+    numero = input("Ingrse un numero entero: ")
+    
+    print("{:,}".format(int(numero)).replace(",", "."))
     
     
-    
-    
 
 
 
 
-
-
-
+cadena_de_numero()

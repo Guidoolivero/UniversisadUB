@@ -11,7 +11,7 @@ while num1 != 1:
     if num1 % 2 == 0:
         num1 = num1 // 2
         lista_numeros.append(num1)
-        print(lista_numeros)2
+        print(lista_numeros)
     else:
         num1 = (num1 * 3) + 1
         lista_numeros.append(num1)
