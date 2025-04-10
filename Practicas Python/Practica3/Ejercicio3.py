@@ -5,3 +5,21 @@ punto con una vocal del texto. La solución es "un ejemplo de pasatiempos". Dise
 programa que ayude al creador de pasatiempos. El programa recibirá una cadena y
 mostrará otra en la que cada vocal ha sido reemplazada por un punto.
 """
+
+def pasatiempos(palabra):
+    
+    vocales = ("aeiou")
+    resultado = ""
+    
+    for caracter in palabra:
+        if caracter in vocales:
+            resultado += "."
+         
+        else:
+            resultado += caracter    
+            
+    print(resultado) 
+    
+palabra = str(input("Ingrese una palabra: "))
+
+pasatiempos(palabra)

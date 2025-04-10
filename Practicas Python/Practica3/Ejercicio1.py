@@ -8,9 +8,5 @@ def cadena_de_numero():
     
     print("{:,}".format(int(numero)).replace(",", "."))
     
-    
-
-
-
 
 cadena_de_numero()
