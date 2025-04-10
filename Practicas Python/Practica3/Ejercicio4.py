@@ -7,3 +7,39 @@ Nota: El procedimiento de suma con acarreo que implementes deberá trabajar
 directamente con la representación binaria leída.
 
 """
+
+def numero_binarios(a,b):
+    
+    longitud1 = len(a)
+    longitud2 = len(b)
+    
+    max_longitud = max(a,b)
+    
+    resultado = ""
+    acarreo = 0
+    
+    
+    
+
+    
+    
+    
+    
+    
+a = str(input("ingrese un numero binario: "))
+
+b = str(input("ingrese otro numero binario: "))
+
+
+numero_binarios(a,b)
+
+
+
+
+
+
+
+
+
+
+
