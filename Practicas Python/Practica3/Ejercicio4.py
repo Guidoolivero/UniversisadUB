@@ -8,31 +8,35 @@ directamente con la representación binaria leída.
 
 """
 
-def numero_binarios(a,b):
-    
-    longitud1 = len(a)
-    longitud2 = len(b)
-    
-    max_longitud = max(a,b)
-    
+def suma_binaria(a, b):
+    # Asegurar que ambas cadenas tengan la misma longitud rellenando con ceros a la izquierda
+    max_longitud = max(len(a), len(b))
+    a = a.zfill(max_longitud)
+    b = b.zfill(max_longitud)
+
     resultado = ""
     acarreo = 0
-    
-    
-    
 
-    
-    
-    
-    
-    
-a = str(input("ingrese un numero binario: "))
+    # Recorrer las cadenas de derecha a izquierda
+    for i in range(max_longitud - 1, - 1, - 1):
+        suma = int(a[i]) + int(b[i]) + acarreo
+        resultado = str(suma % 2) + resultado  # Agregar el bit resultante al inicio
+        acarreo = suma // 2  # Calcular el acarreo
 
-b = str(input("ingrese otro numero binario: "))
+    # Si queda un acarreo al final, agregarlo al resultado
+    if acarreo:
+        resultado = "1" + resultado
+
+    return resultado
 
 
-numero_binarios(a,b)
+# Solicitar los números binarios al usuario
+a = input("Ingrese un número binario: ")
+b = input("Ingrese otro número binario: ")
 
+# Mostrar el resultado de la suma
+resultado = suma_binaria(a, b)
+print(f"La suma de {a} y {b} es: {resultado}")
 
 
 
