@@ -28,19 +28,19 @@ def numero_telefonico(letra):
     
     for numero, letras in numeros.items():
         if letra.lower() in letras:
-            return str(numeros)
-         
+            return str(numero)
+             
     return letra
-
-
-
-    resultado = ""
     
-    for caracter in texto: 
-        resultado += numero_telefonico(caracter)
     
-    return resultado
+def convertir_numero_telefonico(texto):
+        resultado = ""
+        
+        for caracter in texto: 
+            resultado += numero_telefonico(caracter)
+        
+        return resultado
 
 telefono = input("Ingrese el numero: ")
-print("Numeros convertidos: ", numero_telefonico(telefono))
+print("Numeros convertidos: ", convertir_numero_telefonico(telefono))
 
