@@ -1,0 +1,99 @@
+
+"""
+Funcion para contar cantidad de letras
+"""
+"""
+def longitud(palabra):
+    
+    cont = 0
+    
+    for i in palabra:
+        cont += 1
+        
+    return cont
+    
+    
+    
+palabras = input("Ingrese una palabra: ")
+
+print(longitud(palabras))
+
+"Contar las letras"
+def indice(pal, c):
+    
+    pos = -1
+    
+    for i in range(longitud(pal)):
+        if pal[i] == c:
+            pos = i
+            
+    return pos
+
+palabras = input("Ingrese una palabra: ")
+letra = input("Ingrese la letra: ")
+
+print(indice(palabras,letra))        
+            
+             
+    
+"comparacion de palabras"
+
+def son_iguales(cad1, cad2):
+    
+    iguales = True
+    
+    if longitud(cad1) != longitud(cad2):
+        
+        iguales = False
+        
+    else: 
+        for a,b in zip(cad1, cad2):
+            if a != b:
+                iguales = False
+    
+    return iguales
+
+cadena1 = input("Ingrese la 1ra palabra: ")
+cadena2 = input("Ingrese la 2da palabra: ")
+
+print(son_iguales(cadena1, cadena2))
+"""
+
+" Pasar a de str a num"
+def parseInt(cadena):
+    
+    acum = 0 
+    
+    for e in cadena:
+        acum = acum * 10 + (ord(e) - ord("0"))
+        
+    return acum
+
+
+"Pasar a mayuscula una palabra"
+def toUpper(c):
+    return chr(ord(c) + ord("E") - ord("e"))
+
+print(toUpper("e"))
+
+
+"Pasar de un nro a str"
+def toString(nro):
+    s= ""
+    while nro != 0:
+        resto  = nro % 10
+        s = s + chr(resto + ord("0"))
+        nro = nro // 10
+    return s
+
+
+print(toString(123))
+
+
+"Si es un numero"
+ 
+def isDigit(d):
+    
+    return d <= "9" and d >= "0"
+
+print(isDigit("f"))
