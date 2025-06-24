@@ -55,30 +55,39 @@ def agregar_libro(titulo, autor, cantPag, isbn, edicion, editorial, genero):
 
 def eliminar_libro(titulo, isbn):
     
-    return
+    for libro in libros:
+        if buscar_libro(titulo, isbn) is not None:
+            
+            libros.remove(libro)
+            print("Libro eliminado")
+            
+    return None
 
 def buscar_libro(titulo, isbn):
     
     for libro in libros:
-        if libro["Titulo"] == titulo or libro["ISBN"] == isbn:
+        if libro["Titulo"] == titulo and libro["ISBN"] == isbn:
             print(libro)
             print("Libro encontrado")
             
             return libro
         else: 
             print("Libro no encontrado")
-    return None
+            
+    
 
 def modificar_libro(titulo, isbn):
     
     return
 
 
-def listar_libors():
-
+def listar_libros():
+    
     return
 
-# ...existing code...
+    
+
+
 
 def menu():
     
@@ -87,7 +96,7 @@ def menu():
     while opcion != "x":
         print("\n--- Menú Biblioteca ---")
         print("1. Agregar libro")
-        print("2. Modificar libro")
+        print("2. Buscar libro")
         print("3. Eliminar libro")
         print("4. Listar libros")
         print("X. Salir")
@@ -119,10 +128,16 @@ def menu():
             
         elif opcion == "3":
             
-            pass
+            titulo = input("Ingrese el título: ")
+            isbn = input("Ingrese el ISBN: ")
+            
+            eliminar_libro(titulo, isbn)
+            
+            
         elif opcion == "4":
            
-            pass
+            return
+            
         elif opcion == "x":
             print("Saliendo del programa...")
             break
